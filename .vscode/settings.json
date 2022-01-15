@@ -1,4 +1,5 @@
 {
     "cortex-debug.armToolchainPath": "/opt/gcc-arm-none-eabi-4_9-2015q3/bin",
-    "cortex-debug.openocdPath": "/usr/bin/openocd"
+    "cortex-debug.openocdPath": "/usr/bin/openocd",
+    "python.formatting.provider": "black"
 }
