@@ -1,1 +1,1 @@
-Based on tutorial: https://www.pythonguis.com/tutorials/creating-your-first-pyqt-window/
+Based on tutorial: https://www.pythonguis.com/pyqt5-tutorial/
