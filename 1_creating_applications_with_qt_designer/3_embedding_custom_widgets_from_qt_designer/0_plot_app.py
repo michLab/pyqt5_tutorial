@@ -6,8 +6,6 @@ from PyQt5.QtWidgets import (
     QMainWindow
 )
 
-from pyqtgraph import PlotWidget, plot
-
 from PyQt5 import uic
 
 
