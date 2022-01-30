@@ -185,7 +185,6 @@ class MainWindow(QMainWindow):
             # if signal is not from the current ta, ignore
             return
         title = self.tabs.currentWidget().page().title()
-        self.setWindowTitle("%s - Mozarella Ashbedger" % title)
 
     def navigate_home(self):
         self.tabs.currentWidget().setUrl(QUrl(self.home_url))
@@ -266,7 +265,7 @@ class MainWindow(QMainWindow):
     def current_tab_changed(self, i):
         qurl = self.tabs.currentWidget().url()
         self.update_url_bar(qurl, self.tabs.currentWidget())
-        self.update_title(self.tabs.currentWidget())
+        
 
     def close_current_tab(self, i):
         if self.tabs.count() < 2:
@@ -278,6 +277,8 @@ class MainWindow(QMainWindow):
 if __name__ == "__main__":
 
     app = QApplication(sys.argv)
+    app.setApplicationName("Mozarella Ashbadger")
+    app.setApplicationVersion("0.1.0.0")
 
     window = MainWindow()
     window.show()
