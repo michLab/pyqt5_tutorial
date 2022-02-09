@@ -1,0 +1,35 @@
+import sys
+
+from PyQt5 import QtWidgets
+from PyQt5 import QtGui
+from PyQt5 import QtCore
+
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication(sys.argv)
+
+    # Define a scene rect of 400x200, with it's origin at 0,0
+    # If we don't set this on creation, we can set it later with .setSceneRect()
+    scene = QtWidgets.QGraphicsScene(0, 0, 400, 200)
+
+    # Draw rectalngle item, setting dimension.
+    rect = QtWidgets.QGraphicsRectItem(0, 0, 200, 50)
+
+    # Set the origin (position) of the rectangle in the scene.
+    rect.setPos(50, 20)
+
+    # Define the brush (fill).
+    brush = QtGui.QBrush(QtCore.Qt.red)
+    rect.setBrush(brush)
+
+    # Define the pen (line).
+    pen = QtGui.QPen(QtCore.Qt.cyan)
+    pen.setWidth(10)
+    rect.setPen(pen)
+
+    scene.addItem(rect)
+
+    view = QtWidgets.QGraphicsView(scene)
+    view.show()
+
+    app.exec()
