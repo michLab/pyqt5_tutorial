@@ -4,3 +4,5 @@ __pycache__
 *.pyproject.user
 *.pyproject
 data.json
+build
+dist
